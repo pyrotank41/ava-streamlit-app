@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  AZURE_WEBAPP_NAME: ava-ui-dev
+  AZURE_WEBAPP_NAME: ava-streamlit-app
 
 jobs:
   build:
