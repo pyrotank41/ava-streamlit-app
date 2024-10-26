@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ava-streamlit-app"
+version = "0.1.0"
+description = ""
+authors = ["Karan Singh Kochar <pyrotank41@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.39.0"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
+kinde-python-sdk = "^1.2.6"
+azure-storage-blob = "^12.23.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

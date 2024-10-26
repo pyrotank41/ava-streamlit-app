@@ -1,0 +1,19 @@
+services:
+  streamlit-app:
+    build: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8501:8501"
+    # environment:
+    #   - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+    #   - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+    #   - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME}
+    #   - MASL_CLIENT_ID=${MASL_CLIENT_ID}
+    #   - MASL_TENENT_ID=${MASL_TENENT_ID}
+    #   - AZURE_AVA_POC_APPS_CONNECTION_STRING=${AZURE_AVA_POC_APPS_CONNECTION_STRING}
+    #   - AZURE_AVA_POC_APPS_CONTAINER_NAME=${AZURE_AVA_POC_APPS_CONTAINER_NAME}
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app/
